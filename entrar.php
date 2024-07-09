@@ -38,20 +38,20 @@
         </nav>
     </header>
 
-    <!-- Formulario entrar -->
+    <!-- Inicio Formulario entrar -->
     <div class="login">
 
         <div class="logar">
             <h1>LOGIN</h1>
 
-            <form action="#" method="post">
-                <input type="email" id="email_usuario" placeholder="Digite seu e-mail">
+            <form action="login.php" method="post">
+                <input type="email" name="email" id="email_usuario" placeholder="Digite seu e-mail">
                 <br>
 
-                <input type="password" id="senha _usuario" placeholder="Digite sua senha">
+                <input type="password" name="senha" id="senha _usuario" placeholder="Digite sua senha">
                 <br>
 
-                <input type="button" id="btn_logar" value="ENTRAR">
+                <input type="submit" name="submit" id="btn_logar" value="ENTRAR">
         </form> 
         </div>
 
@@ -104,6 +104,7 @@
     <!-- para fazer a animação do banner -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/cycle.js"></script>
+
 
 </body>
 </html>
