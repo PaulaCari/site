@@ -289,7 +289,40 @@ margin-bottom: 1%;
     cursor: pointer;
 }
 
+/*formatação  usuario*/
+.barra_top{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor2);
+    margin: 2% auto;
+    padding: 2% 5%;
+    border-radius: 10px 10px 0 0;
+    color: var(--cor4);
+}
 
+.barra a{
+    color: var(--cor4);
+}
+
+.usuario{
+    background-color: var(--cor1);
+    width:95%;
+    height: 500px;
+    margin: -2% auto;
+    padding: 4%;
+    text-align: center;
+}
+.usuario h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor2);
+    margin-bottom: .5rem;
+}
+.usuario p{
+    color: var(--cor2);
+}
 
 
 
