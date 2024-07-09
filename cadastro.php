@@ -44,16 +44,18 @@
         <div class="cad" id="cadastro">
 
             <h1>Cadastro de Clientes</h1>
-            <form action="#" method="post">
+            
+            <form action="cadastro.php" method="post">
 
-                <input type="text" id="nome" placeholder="Digite seu nome completo"> <br>
-                <input type="email" id="email" placeholder="Digite seu email"> <br>
-                <input type="password" id="senha" placeholder="Digite sua senha segura"> <br>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"> <br>
+                <input type="email" id="email" name="email" placeholder="Digite seu email"> <br>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha segura"> <br>
 
-                <input type="radio" id="feminino" value="Feminino" nome="sexo">Feminino
-                <input type="radio" id="masculino" value="Masculino" nome="sexo">Masculino <br>
+                <input type="radio" id="feminino" name="sexo" value="F" >Feminino
+                <input type="radio" id="masculino" name="sexo" value="M" >Masculino 
+                <input type="radio" id="outro" name="sexo" value="O" >Outro <br>
 
-                <input type="button" id="b_cadastro" value="CADASTRAR">
+                <input type="submit" id="button" name="submit" value="CADASTRAR">
             </form>
         </div>
 
@@ -103,6 +105,22 @@
     <!-- para fazer a animação do banner -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/cycle.js"></script>
+
+    <!-- Configuração do PHP -->
+     <?php
+
+     if(isset($_POST['Submit'])){
+        include_once('conectar.php');
+
+        // criação das variaveis
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $sexo = $_POST['sexo'];
+
+        $clientes = mysqli_query($conexao, "INSERT INTO cadastro_clientes(nome_cliente, email_cliente, senha_cliente, sexo_cliente) VALUES('$nome','$email','$senha','$sexo')");
+     }
+     ?>
 
 </body>
 </html>
