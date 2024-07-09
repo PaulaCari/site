@@ -1,3 +1,22 @@
+<!-- configurar do  PHP -->
+
+<?php
+//iniciar uma sessão
+session_start();
+
+if((!isset($_SESSION['email_cliente']) ==true) and (!isset($_SESSION['senha_cliente'])==true))
+{
+  //destruir as variaveis
+  unset($_SESSION['email_cliente']);
+  unset($_SESSION['senha_cliente']); 
+  header('location:entrar.php');
+}
+else{
+    //criar um avariavel de acesso
+    $logado = $_SESSION['email_cliente'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -50,7 +69,10 @@
   </section>
 
   <section class="usuario">
-    <h2>Olá, Nome do clientes</h2>
+    <!-- <h2>Olá, Nome do clientes</h2> -->
+     <?php
+     echo "<h2>Olá, $logado</h2>";
+     ?>
     <p>Seja Bem-vindo ao Mercado Preso</p>
   </section>
 
