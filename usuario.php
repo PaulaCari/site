@@ -1,7 +1,7 @@
 <!-- configurar do  PHP -->
 
 <?php
-//iniciar uma sessão
+//iniciar uma sessão 
 session_start();
 
 if((!isset($_SESSION['email_cliente']) ==true) and (!isset($_SESSION['senha_cliente'])==true))
@@ -64,7 +64,8 @@ else{
      </div>
 
      <div class="barra">
-        <a href="index.html">SAIR</a>
+        <!-- <a href="index.html">SAIR</a> -->
+        <a href="sair.php">SAIR</a>
      </div>
   </section>
 

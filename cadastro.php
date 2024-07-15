@@ -106,7 +106,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./js/cycle.js"></script>
 
-    <!-- Configuração do PHP -->
+    <!-- Configuração do PHP informações para o banco de dados -->
      <?php
 
      if(isset($_POST['Submit'])){
@@ -119,6 +119,9 @@
         $sexo = $_POST['sexo'];
 
         $clientes = mysqli_query($conexao, "INSERT INTO cadastro_clientes(nome_cliente, email_cliente, senha_cliente, sexo_cliente) VALUES('$nome','$email','$senha','$sexo')");
+
+        //fazer direcionamento para entrar
+        header('location:entrar.php');
      }
      ?>
 
